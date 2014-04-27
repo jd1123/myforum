@@ -3,7 +3,6 @@ from forum import views
 
 urlpatterns = patterns('',
                        url(r"^$",views.forumlist, name = "forumlist"),
-                       url(r"^about/",views.about, name = "about"),
                        url(r"^forum/(\d+)/$", views.threadlist, name = "threadlist"),
                        url(r"^thread/(\d+)/$", views.postlist, name = "thread"),
                        url(r"^new_thread/(\d+)/$", views.new_post, name = "new_thread"),

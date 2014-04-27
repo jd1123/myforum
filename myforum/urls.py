@@ -11,5 +11,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^forum/',include('forum.urls')),
+    url(r'^about/', forum.views.about, name="about"),
     url(r"^$",forum.views.root, name = "root"),
 )
