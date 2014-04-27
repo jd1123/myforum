@@ -1,0 +1,18 @@
+{% extends 'forum/base.html' %}
+{% load static %}
+{% block body_block %}
+		
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<!-- /span -->
+				<div class="hero-unit">
+					Hi everyone. This is my site. Thanks for stopping by! <br>
+					Please check out the <a href="{% url 'forum.views.about' %}">About</a> section.
+				</div>
+				<!-- span -->
+			</div>
+			<!-- row -->
+		</div>
+		<!-- /.fluid-container -->
+
+{% endblock %}
