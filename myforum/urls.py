@@ -8,9 +8,10 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'myforum.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
+    
     url(r'^admin/', include(admin.site.urls)),
     url(r'^forum/',include('forum.urls')),
+    url(r'^wedding/',include('weddingpics.urls')),
     url(r'^about/', forum.views.about, name="about"),
     url(r"^$",forum.views.root, name = "root"),
 )

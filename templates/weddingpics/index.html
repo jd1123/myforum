@@ -1,0 +1,25 @@
+{% extends 'forum/base.html' %}
+{% block title %}Our Wedding Pictures{% endblock %}
+
+{% load static %}
+
+{% block body_block %}
+
+	{% if user.is_authenticated %}
+
+		<div class="hero-unit">
+			{% for pic in pics %}
+				<div>
+					<img src="{% static 'images/JuliaBride.jpg' %}"> <br />
+					<center>{{ pic.caption }}</center>
+				</div>
+			{% endfor %}
+		</div>
+
+	{% else %}
+		<div class="hero-unit">
+			Sorry, you must login
+		</div>
+	{% endif %}
+	
+{% endblock %}
